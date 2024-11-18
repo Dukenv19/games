@@ -1,0 +1,182 @@
+/* Scale the entire page by 90% */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    transform: scale(1); /* Scale the whole page down to 90% */
+    transform-origin: top left; /* Ensure scaling starts from the top-left corner */
+    width: 100%;
+    height: 100%;
+}
+
+/* Style the buttons to make them larger */
+button {
+    font-size: 16px; /* Increase the font size */
+    padding: 10px 20px; /* Add padding to make the buttons bigger */
+    margin: 10px; /* Add some spacing between buttons */
+    background-color: #4CAF50; /* Set a background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+/* Add hover effect to buttons */
+button:hover {
+    background-color: #45a049; /* Darken background color on hover */
+}
+
+/* Specific styles for individual buttons (optional, if you want different styles for each button) */
+#SearchButton, #NewGameButton, #FlipButton, #TakeButton {
+    font-size: 16px; /* Increase font size for these buttons */
+    padding: 14px 28px; /* More padding for bigger buttons */
+}
+
+
+/* Adjust the positioning and size of FenInDiv */
+#FenInDiv {
+    position: absolute;
+    top: 1000px;
+    left: 60px;
+    display: none;
+}
+
+#fenIn { 
+    width: 480px;
+    left: 60px;
+}
+
+#versionLink {
+    margin-left: 10px;
+    font-size: small;
+}
+
+/* Loading book message */
+#LoadingBook {
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    display: none;
+}
+
+/* Current FEN display */
+#CurrentFenDiv {
+    position: absolute;
+    left: 60px;
+    top: 1000px;
+    margin-top: 40px;
+    display: none;
+}
+
+/* Chessboard size */
+#Board {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 960px;
+    height: 960px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+/* Engine output section */
+#EngineOutput {
+    position: absolute;
+    top: 1000px;
+    left: 100px;
+}
+
+/* Adjust the width of the Thinking Time dropdown */
+#ThinkTimeChoice {
+    width: 150px; /* Set a desired width */
+    font-size: 16px; /* Optional: increase font size for better readability */
+    padding: 5px; /* Optional: add padding inside the dropdown */
+}
+
+/* Thinking image placeholder */
+#ThinkingImageDiv {
+    position: absolute;
+    top: 1100px;
+    left: 600px;
+    display: none;
+}
+
+/* Thinking image size */
+#ThinkingPng {
+    width: 50px;
+    height: 30px;
+}
+
+/* Chess piece styling */
+.Piece {
+    position: absolute;
+}
+
+/* Chess square styling */
+.Square {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+}
+
+/* Light and dark square colors */
+.Light {
+    background-color: #5fbcd3;
+}
+
+.Dark {
+    background-color: #afdde9;
+}
+
+/* Selected square color */
+.SqSelected {
+    background-color: #216778;
+}
+
+/* Clickable element cursor */
+.clickElement { 
+    cursor: pointer; 
+}
+
+/* Ranking and file positioning for the board */
+.rank1 { top: 840px; }
+.rank2 { top: 720px; }
+.rank3 { top: 600px; }
+.rank4 { top: 480px; }
+.rank5 { top: 360px; }
+.rank6 { top: 240px; }
+.rank7 { top: 120px; }
+.rank8 { top: 0px; }
+
+.file1 { left: 0px; }
+.file2 { left: 120px; }
+.file3 { left: 240px; }
+.file4 { left: 360px; }
+.file5 { left: 480px; }
+.file6 { left: 600px; }
+.file7 { left: 720px; }
+.file8 { left: 840px; }
+
+/* Flipped board positioning */
+.rank8flip { top: 840px; }
+.rank7flip { top: 720px; }
+.rank6flip { top: 600px; }
+.rank5flip { top: 480px; }
+.rank4flip { top: 360px; }
+.rank3flip { top: 240px; }
+.rank2flip { top: 120px; }
+.rank1flip { top: 0px; }
+
+.file8flip { left: 0px; }
+.file7flip { left: 120px; }
+.file6flip { left: 240px; }
+.file5flip { left: 360px; }
+.file4flip { left: 480px; }
+.file3flip { left: 600px; }
+.file2flip { left: 720px; }
+.file1flip { left: 840px; }
